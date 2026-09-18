@@ -9,7 +9,7 @@ public:
             if(curr_profit > profit){
                 profit = curr_profit;
             }
-            buying_price = (buying_price < prices[i]) ? buying_price : prices[i];
+            buying_price = min(buying_price, prices[i]);
         }
         return profit;
     }
